@@ -9,27 +9,31 @@
 * "((()))", "(()())", "(())()", "()(())", "()()()"
 */
 
+#include <vector>
+#include <string>
+#include <cstring>
+
 class Solution {
 public:
-    vector<string> generateParenthesis(int n) {
+	std::vector<std::string> generateParenthesis(int n) {
 		
-		vector<string> result;
+		std::vector<std::string> result;
 		generateParenthesis("",result,n,n,n);
         return result;
     }
 	
-	void generateParenthesis(string s, vector<string> &result, int closed, int open, int &n) {
+	void generateParenthesis(std::string s, std::vector<std::string> &result, int closed, int open, int &n) {
 		
 		if (0 == closed && 0 == open) {
 			result.push_back(s);
 		}
 		
 		if (open > 0) {
-			generateParenthesis(s+'(', result, closed,open-1,n);
+			generateParenthesis(s+"(", result, closed,open-1,n);
 		}
 		
 		if (closed > open) {
-			generateParenthesis(s+')', result, closed-1,open,n);
+			generateParenthesis(s+")", result, closed-1,open,n);
 		}
 	}
 };

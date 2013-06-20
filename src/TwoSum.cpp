@@ -10,23 +10,26 @@ Input: numbers={2, 7, 11, 15}, target=9
 Output: index1=1, index2=2
 
 **/
-std::vector<int> twoSum(std::vector<int> &numbers, int target) {
-	
-	vector<int> result;
-	
-	for(int i = 0; i < numbers.size(); ++i) {
-		for(int j = numbers.size()-1; j>i; --j) {
-			int sum = numbers[i]+numbers[j];
-			if(target == sum) {
-				result.push_back(i+1);
-				result.push_back(j+1);
+
+#include <vector>
+
+class Solution {
+
+public:
+	std::vector<int> twoSum(std::vector<int> &numbers, int target) {
+		
+		std::vector<int> result;
+		
+		for(unsigned int i = 0; i < numbers.size(); ++i) {
+			for(unsigned int j = numbers.size()-1; j>i; --j) {
+				int sum = numbers[i]+numbers[j];
+				if(target == sum) {
+					result.push_back(i+1);
+					result.push_back(j+1);
+				}
 			}
 		}
+		
+		return result;
 	}
-	
-	return result;
-}
-
-int main() {
-
-}
+};

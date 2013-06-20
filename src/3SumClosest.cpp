@@ -12,10 +12,11 @@
 
 #include <vector>
 #include <cmath>
+#include <algorithm>
 
 class Solution {
 public:
-    int threeSumClosest(vector<int> &num, int target) {
+	int threeSumClosest(std::vector<int> &num, int target) {
         
 		int closest = num[0]+num[1]+num[2];
 		

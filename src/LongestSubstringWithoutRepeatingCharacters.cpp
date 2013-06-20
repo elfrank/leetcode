@@ -12,10 +12,11 @@
 
 #include <string>
 #include <cmath>
+#include <algorithm>
 
 class Solution {
 public:
-    int lengthOfLongestSubstring(string s) {
+	int lengthOfLongestSubstring(std::string s) {
 		
 		int result = 0;
 		int start = 0;
@@ -26,8 +27,8 @@ public:
 			char letter = s[end];
 			int letter_i = static_cast<int>(letter);
 			// reset counter and set letters to false
-			if(visited[letter_i] {
-				result = max(result, end-start);
+			if(visited[letter_i]) {
+				result = std::max(result, end-start);
 				while(s[start] != s[end]) {
 					visited[static_cast<int>(s[start++])] = false;
 				}
@@ -40,7 +41,7 @@ public:
 			}
 		}
 		
-		result = max(res,end-start);
+		result = std::max(result,end-start);
 		return result;
         
     }

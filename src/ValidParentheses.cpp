@@ -7,10 +7,12 @@
 * The brackets must close in the correct order, "()" and "()[]{}" are all valid
 * but "(]" and "([)]" are not.
 */
+#include <stack>
+#include <string>
 
 class Solution {
 public:
-    bool isValid(string s) {
+	bool isValid(std::string s) {
         
 		if (0 ==s.size()) {
 			return true;

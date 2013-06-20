@@ -21,6 +21,7 @@
 
 #include <vector>
 #include <set>
+#include <algorithm>
 
 class Solution {
 public:
@@ -31,7 +32,7 @@ public:
 		}
 		
 		sort(num.begin(), num.end());
-        set<std::vector<int> > result_set;
+		std::set<std::vector<int> > result_set;
 		
         int n = num.size();
 		int j = 0;

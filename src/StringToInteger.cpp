@@ -34,6 +34,7 @@
 */
 
 #include <climits>
+#include <string>
 
 class Solution {
 public:

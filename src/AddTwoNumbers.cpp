@@ -1,17 +1,17 @@
-/**
- * Definition for singly-linked list.
- * struct ListNode {
- *     int val;
- *     ListNode *next;
- *     ListNode(int x) : val(x), next(NULL) {}
- * };
- */
+
+//  Definition for singly-linked list.
+struct ListNode {
+	int val;
+	ListNode *next;
+	ListNode(int x) : val(x), next(0) {}
+ };
+ 
 class Solution {
 public:
     ListNode *addTwoNumbers(ListNode *l1, ListNode *l2) {
         
-        ListNode* l3 = NULL;
-        ListNode* current = NULL;
+        ListNode* l3 = 0;
+        ListNode* current = 0;
         int a = 0;
         int b = 0;
         int c = 0;

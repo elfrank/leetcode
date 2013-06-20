@@ -6,12 +6,15 @@
 * Input is guaranteed to be within the range from 1 to 3999.
 */
 
+#include <string>
+#include <map>
+
 class Solution {
 public:
     
-	map<char,int> table;
+	std::map<char,int> table;
 
-    int romanToInt(string s) {
+	int romanToInt(std::string s) {
         
 		table['I'] = 1;
 		table['V'] = 5;

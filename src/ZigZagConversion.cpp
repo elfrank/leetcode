@@ -24,9 +24,11 @@
 * P     I
 */
 
+#include <string>
+
 class Solution {
 public:
-    string convert(string s, int nRows) {
+	std::string convert(std::string s, int nRows) {
 		if(nRows < 2){
             return s;
         }
@@ -34,7 +36,7 @@ public:
 		int n = s.size();
 		int i = 0;
 		int stride = 2*nRows-2;
-		string result;
+		std::string result;
 		
 		for(int i = 0; i < n; i+=stride) {
 			result.push_back(s[i]);

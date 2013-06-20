@@ -1,7 +1,10 @@
+
+#include <string>
+
 class Solution {
 public:
 
-     int isPalindrome(string &s, int &start, int &end) {
+	int isPalindrome(std::string &s, int &start, int &end) {
     
         bool isPalindrome = true;
         int length = end-start+1;
@@ -15,9 +18,9 @@ public:
         return isPalindrome;
     }
     
-    string longestPalindrome(string s) {
+	std::string longestPalindrome(std::string s) {
   
-        string longest = "";
+		std::string longest = "";
         int maxi = 0;
         int maxLength = 0;
         int n = s.size();
